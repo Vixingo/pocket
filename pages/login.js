@@ -2,7 +2,7 @@ import styles from "../styles/login.module.css";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-
+import Head from "next/head";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -13,6 +13,8 @@ import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import Image from "next/image";
+import Recaptcha from "react-recaptcha";
+
 function Copyright(props) {
     return (
         <Typography
@@ -43,6 +45,14 @@ function login() {
 
     return (
         <>
+            <Head>
+                <title>Login</title>
+                <script
+                    src="https://www.google.com/recaptcha/api.js"
+                    async
+                    defer
+                ></script>
+            </Head>
             <section className={styles.login}>
                 <Container maxWidth="sm" sx={{ padding: "0" }}>
                     {" "}
@@ -194,6 +204,21 @@ function login() {
                                         </Link>
                                     </Box>
                                 </Box>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        marginTop: "20px",
+                                    }}
+                                >
+                                    {" "}
+                                    <Recaptcha
+                                        sitekey="6LeRgvYiAAAAAMVwOuiOcXsmJk5Dbziwvnp8YCVe"
+                                        render="explit"
+                                        // onloadCallback={recaptchaLoaded}
+                                        // verifyCallback={verifyCallback}
+                                    />
+                                </Box>
                                 <Button
                                     type="submit"
                                     fullWidth
@@ -202,6 +227,7 @@ function login() {
                                 >
                                     Sign In
                                 </Button>
+                                <h6>Or login with</h6>
                                 <Grid container>
                                     <Grid item xs>
                                         <Link href="#" variant="body2">
