@@ -1,7 +1,12 @@
-import '../styles/globals.css'
-
+import "../styles/globals.css";
+import { ThemeProvider } from "@mui/material";
+import { appTheme } from "../themes/themes";
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return (
+        <ThemeProvider theme={appTheme}>
+            <Component {...pageProps} />
+        </ThemeProvider>
+    );
 }
 
-export default MyApp
+export default MyApp;
