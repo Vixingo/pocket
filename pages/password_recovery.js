@@ -12,9 +12,7 @@ import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
-import Image from "next/image";
-
-function login() {
+function password_recovery() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -23,11 +21,10 @@ function login() {
             password: data.get("password"),
         });
     };
-
     return (
         <>
             <Head>
-                <title>Login</title>
+                <title>Password Recovery</title>
                 <script src="https://www.google.com/recaptcha/api.js"></script>
             </Head>
             <section className={styles.login}>
@@ -87,34 +84,30 @@ function login() {
                                 variant="h1"
                                 sx={{
                                     pt: 3,
-                                    pb: 2,
+                                    pb: 3,
                                 }}
                             >
-                                Sign In
+                                Password Recovery
                             </Typography>
                             <Typography
-                                display="flex"
-                                sx={{
-                                    justifyContent: "space-between",
-                                }}
+                                color={"#535c6d"}
+                                textAlign={"center"}
+                                fontWeight="300"
                             >
-                                Not yet registered?{" "}
-                                <Link
-                                    href="/registration"
-                                    className="my_link"
-                                    style={{ marginLeft: "10px" }}
-                                >
-                                    Registration
-                                </Link>
+                                Enter your registered email address and we will
+                                send you an email with instructions on how to
+                                reset your Pocket Option account password.
                             </Typography>
+
                             <Box
                                 component="form"
                                 onSubmit={handleSubmit}
                                 noValidate
+                                width={"100%"}
                                 sx={{
+                                    pt: 1,
                                     maxWidth: "420px",
                                     padding: "12px 0px",
-                                    pt: 1,
                                     textAlign: "center",
                                 }}
                             >
@@ -129,62 +122,7 @@ function login() {
                                     variant="standard"
                                     size="small"
                                 />
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                    id="password"
-                                    size="small"
-                                    autoComplete="current-password"
-                                    variant="standard"
-                                />
-                                <Box
-                                    display={"flex"}
-                                    sx={{
-                                        justifyContent: "space-between",
-                                        mt: 2,
-                                        mb: 4,
-                                    }}
-                                >
-                                    {" "}
-                                    <Box>
-                                        {" "}
-                                        <Checkbox
-                                            value="remember"
-                                            color="primary"
-                                            sx={{ padding: "4px" }}
-                                        />
-                                        <Typography
-                                            sx={{
-                                                display: "inline",
-                                                fontSize: "12px",
-                                            }}
-                                        >
-                                            Remember me
-                                        </Typography>
-                                    </Box>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <RestartAltRoundedIcon color="primary" />
-                                        <Link
-                                            className="my_link"
-                                            style={{
-                                                display: "inline",
-                                                fontSize: "12px",
-                                            }}
-                                            href="/password_recovery"
-                                        >
-                                            Password Recovery
-                                        </Link>
-                                    </Box>
-                                </Box>
+
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -220,39 +158,11 @@ function login() {
                                             "linear-gradient(79deg, #ffff1a,#F0B90B)",
                                     }}
                                 >
-                                    Sign In
+                                    Restore
                                 </Button>
-
-                                <h5 style={{ marginBottom: "16px" }}>
-                                    Or login with
-                                </h5>
-
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        justifyContent: "space-evenly",
-                                    }}
-                                >
-                                    <button
-                                        className={styles.social_btn}
-                                        style={{
-                                            background: "#0099fa",
-                                            color: "#fff",
-                                        }}
-                                    >
-                                        <FacebookIcon /> &nbsp; Facebook
-                                    </button>
-
-                                    <button className={styles.social_btn}>
-                                        <Image
-                                            src="/img/G _Logo.svg"
-                                            alt=""
-                                            width={24}
-                                            height={24}
-                                        />{" "}
-                                        &nbsp; Google
-                                    </button>
-                                </Box>
+                                <Link href="/login" className="my_link">
+                                    Back to Log In
+                                </Link>
                             </Box>
                         </Box>
                     </Container>{" "}
@@ -263,4 +173,4 @@ function login() {
     );
 }
 
-export default login;
+export default password_recovery;

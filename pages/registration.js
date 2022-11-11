@@ -12,6 +12,7 @@ import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
+import Image from "next/image";
 function registration() {
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -111,7 +112,8 @@ function registration() {
                                 noValidate
                                 sx={{
                                     pt: 1,
-                                    padding: "12px 40px",
+                                    maxWidth: "420px",
+                                    padding: "12px 0px",
                                     textAlign: "center",
                                 }}
                             >
@@ -242,11 +244,11 @@ function registration() {
                                     </button>
 
                                     <button className={styles.social_btn}>
-                                        <img
+                                        <Image
                                             src="/img/G _Logo.svg"
                                             alt=""
-                                            width={"24px"}
-                                            height={"24px"}
+                                            width={24}
+                                            height={24}
                                         />{" "}
                                         &nbsp; Google
                                     </button>

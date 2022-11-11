@@ -12,11 +12,11 @@ export default function Home() {
                     <Link href="/login">
                         <Button variant="outlined">Login</Button>
                     </Link>
-                    <Link href="/forgot">
-                        <Button variant="outlined">Login</Button>
+                    <Link href="/registration">
+                        <Button variant="outlined">registration</Button>
                     </Link>
-                    <Link href="/signup">
-                        <Button variant="outlined">Login</Button>
+                    <Link href="/password_recovery">
+                        <Button variant="outlined">password recovery</Button>
                     </Link>
                 </li>
             </ul>
