@@ -2,8 +2,64 @@
     /* height: 100vh;
     width: 100vw; */
     padding-top: 20px;
-    background-color: #ffffe6;
+    background-color: #181a20;
 }
 .container {
     color: #fff;
+}
+.social_btn {
+    width: 140px;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn_grad {
+    background-image: linear-gradient(
+        to right,
+        #f2994a 0%,
+        #f0b90b 51%,
+        #f2994a 100%
+    );
+
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn_grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+.footerMenu {
+    font-weight: 300;
+    padding: 73px 10px 10px;
+}
+.footerMenunav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.footerMenunav__item {
+    margin: 0 15px 21px;
+    list-style: none;
+}
+.footerMenunav__link {
+    border-bottom: 1px solid #cfd8dc;
+    color: #cfd8dc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.footerMenunav__link:hover {
+    border-bottom: 1px solid transparent;
 }

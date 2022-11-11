@@ -12,6 +12,12 @@ export default function Home() {
                     <Link href="/login">
                         <Button variant="outlined">Login</Button>
                     </Link>
+                    <Link href="/forgot">
+                        <Button variant="outlined">Login</Button>
+                    </Link>
+                    <Link href="/signup">
+                        <Button variant="outlined">Login</Button>
+                    </Link>
                 </li>
             </ul>
         </>

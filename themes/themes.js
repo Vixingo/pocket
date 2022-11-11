@@ -6,10 +6,11 @@ export const appTheme = createTheme({
         },
     },
     typography: {
-        fontFamily: "Open Sans",
+        fontFamily: "Nunito Sans",
         h1: {
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: "2rem",
+            fontFamily: "Open Sans",
         },
     },
 });

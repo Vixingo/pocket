@@ -12,8 +12,7 @@ import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
-
-function login() {
+function registration() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -26,7 +25,7 @@ function login() {
     return (
         <>
             <Head>
-                <title>Login</title>
+                <title>Registration</title>
                 <script src="https://www.google.com/recaptcha/api.js"></script>
             </Head>
             <section className={styles.login}>
@@ -89,7 +88,7 @@ function login() {
                                     pb: 2,
                                 }}
                             >
-                                Sign In
+                                Registration
                             </Typography>
                             <Typography
                                 display="flex"
@@ -97,13 +96,13 @@ function login() {
                                     justifyContent: "space-between",
                                 }}
                             >
-                                Not yet registered?{" "}
+                                Already registered?
                                 <Link
-                                    href="/registration"
+                                    href="/login"
                                     className="my_link"
                                     style={{ marginLeft: "10px" }}
                                 >
-                                    Registration
+                                    Sign in
                                 </Link>
                             </Typography>
                             <Box
@@ -139,6 +138,17 @@ function login() {
                                     autoComplete="current-password"
                                     variant="standard"
                                 />
+                                <TextField
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="password"
+                                    label="Password confirmation *"
+                                    type="password"
+                                    id="password"
+                                    size="small"
+                                    variant="standard"
+                                />
                                 <Box
                                     display={"flex"}
                                     sx={{
@@ -161,26 +171,16 @@ function login() {
                                                 fontSize: "12px",
                                             }}
                                         >
-                                            Remember me
-                                        </Typography>
-                                    </Box>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <RestartAltRoundedIcon color="primary" />
-                                        <Link
-                                            className="my_link"
-                                            style={{
-                                                display: "inline",
-                                                fontSize: "12px",
-                                            }}
-                                            href="/"
-                                        >
-                                            Password Recovery
-                                        </Link>
+                                            I have read and accepted the
+                                            following agreement:{" "}
+                                            <Link
+                                                href={"/Public"}
+                                                className="my_link"
+                                            >
+                                                {" "}
+                                                Public Offer
+                                            </Link>
+                                        </Typography>{" "}
                                     </Box>
                                 </Box>
                                 <Box
@@ -218,7 +218,7 @@ function login() {
                                             "linear-gradient(79deg, #ffff1a,#F0B90B)",
                                     }}
                                 >
-                                    Sign In
+                                    Sign Up
                                 </Button>
 
                                 <h5 style={{ marginBottom: "16px" }}>
@@ -261,4 +261,4 @@ function login() {
     );
 }
 
-export default login;
+export default registration;
