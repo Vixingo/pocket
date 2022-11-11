@@ -12,6 +12,7 @@ import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
+import Script from "next/script";
 function password_recovery() {
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,8 +26,11 @@ function password_recovery() {
         <>
             <Head>
                 <title>Password Recovery</title>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
             </Head>
+            <Script
+                async
+                src="https://www.google.com/recaptcha/api.js"
+            ></Script>
             <section className={styles.login}>
                 <Container maxWidth="sm" sx={{ padding: "0" }}>
                     {" "}

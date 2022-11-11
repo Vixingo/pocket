@@ -13,6 +13,7 @@ import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
 import Image from "next/image";
+import Script from "next/script";
 
 function login() {
     const handleSubmit = (event) => {
@@ -28,8 +29,12 @@ function login() {
         <>
             <Head>
                 <title>Login</title>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
             </Head>
+
+            <Script
+                async
+                src="https://www.google.com/recaptcha/api.js"
+            ></Script>
             <section className={styles.login}>
                 <Container maxWidth="sm" sx={{ padding: "0" }}>
                     {" "}

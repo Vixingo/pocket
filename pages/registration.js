@@ -12,6 +12,7 @@ import Link from "next/link";
 import RestartAltRoundedIcon from "@mui/icons-material/RestartAltRounded";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterMenu from "../components/FooterMenu";
+import Script from "next/script";
 import Image from "next/image";
 function registration() {
     const handleSubmit = (event) => {
@@ -27,8 +28,17 @@ function registration() {
         <>
             <Head>
                 <title>Registration</title>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <Link rel="preconnect" href="https://www.google.com" />
+                <Link
+                    rel="preconnect"
+                    href="https://www.gstatic.com"
+                    crossorigin
+                />
             </Head>
+            <Script
+                async
+                src="https://www.google.com/recaptcha/api.js"
+            ></Script>
             <section className={styles.login}>
                 <Container maxWidth="sm" sx={{ padding: "0" }}>
                     {" "}
