@@ -87,6 +87,7 @@ function password_recovery() {
                                 component="h1"
                                 variant="h1"
                                 sx={{
+                                    display: "block",
                                     pt: 3,
                                     pb: 3,
                                 }}
@@ -158,8 +159,15 @@ function password_recovery() {
                                         padding: "16px 20px 14px",
                                         mx: "auto",
                                         fontWeight: "800",
-                                        background:
-                                            "linear-gradient(79deg, #ffff1a,#F0B90B)",
+
+                                        backgroundImage:
+                                            "linear-gradient( to right, #f2994a 0%,  #f0b90b 51%,  #f2994a 100%)",
+                                        transition: "0.5s",
+                                        backgroundSize: "200% auto",
+                                        color: "#fff",
+                                        boxShadow: "0 0 20px #eee",
+                                        borderRadius: "10px",
+                                        display: "block",
                                     }}
                                 >
                                     Restore
