@@ -1,0 +1,30 @@
+.Navbar {
+    background-color: red;
+    width: 100%;
+    height: 101px;
+}
+.header {
+    height: 60px;
+    padding: 0px 29px;
+    display: flex;
+    align-items: center;
+    background-color: #1c202e;
+    border-bottom: 1px solid #464a58;
+}
+.header_right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.safe {
+    padding: 0 10px;
+}
+.balance {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+}
+.open_real {
+    padding-left: 10px;
+    padding-right: 10px;
+}

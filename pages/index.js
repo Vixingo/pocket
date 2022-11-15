@@ -18,6 +18,9 @@ export default function Home() {
                     <Link href="/password_recovery">
                         <Button variant="outlined">password recovery</Button>
                     </Link>
+                    <Link href="/trade">
+                        <Button variant="outlined">trade</Button>
+                    </Link>
                 </li>
             </ul>
         </>
