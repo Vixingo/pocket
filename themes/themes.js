@@ -6,7 +6,7 @@ export const appTheme = createTheme({
         },
     },
     typography: {
-        fontFamily: "Nunito Sans",
+        fontFamily: "Open Sans",
         h1: {
             fontWeight: 700,
             fontSize: "2rem",

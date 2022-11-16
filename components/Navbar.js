@@ -1,4 +1,13 @@
-import { Button, Box, Typography, IconButton } from "@mui/material";
+import {
+    Button,
+    Box,
+    Typography,
+    IconButton,
+    Avatar,
+    Menu,
+    MenuItem,
+    Badge,
+} from "@mui/material";
 import React, { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import Logo from "./Logo";
@@ -6,24 +15,19 @@ import CircularProgress from "@mui/material/CircularProgress";
 import PropTypes from "prop-types";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import RedeemIcon from "@mui/icons-material/Redeem";
+import Fav_btn from "./Fav_btn";
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const [anchorElNav, setAnchorElNav] = useState(null);
-const [anchorElUser, setAnchorElUser] = useState(null);
+// var $ = require("jquery");
+// if (typeof window !== "undefined") {
+//     window.$ = window.jQuery = require("jquery");
+// }
 
-const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-};
-const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-};
-
-const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-};
-
-const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-};
+// const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+//     ssr: false,
+// });
 
 function CircularProgressWithLabel(props) {
     return (
@@ -81,6 +85,24 @@ function Navbar() {
         };
     }, []);
 
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
+
     return (
         <>
             <section className={styles.Navbar}>
@@ -95,6 +117,7 @@ function Navbar() {
                             height: " 45px",
                             minWidth: "40px",
                             padding: "0 6px",
+                            marginLeft: "30px",
                         }}
                     >
                         <CircularProgressWithLabel value={progress} />
@@ -122,7 +145,7 @@ function Navbar() {
                                     textTransform: "none",
                                 }}
                             >
-                                Select an asset you like
+                                Fetching Happiness
                             </Typography>
                         </Box>
                     </Button>
@@ -286,20 +309,117 @@ function Navbar() {
                                 </Typography>
                             </Button>
                         </div>
-                        <div className="profile_btn">
-                            <IconButton
-                                onClick={handleOpenUserMenu}
-                                sx={{ p: 0 }}
+                        <div className={styles.profile_btn}>
+                            <Badge color="primary" variant="dot">
+                                <IconButton
+                                    onClick={handleOpenUserMenu}
+                                    sx={{
+                                        p: 0,
+                                        position: "relative",
+                                        width: "50px",
+                                        height: "50px",
+                                    }}
+                                >
+                                    <Avatar
+                                        alt="Profile"
+                                        src="/img/no_avatar.png"
+                                        sx={{ width: "50px", height: "50px" }}
+                                    />
+                                    <div>
+                                        <Button
+                                            size="small"
+                                            variant="outlined"
+                                            sx={{
+                                                position: "absolute",
+                                                right: "50%",
+                                                transform: "translateX(50%)",
+                                                fontSize: "9px",
+                                                color: "#fff",
+                                                bottom: "3px",
+                                                padding: "0px",
+                                                border: "1px solid hsla(45,2%,65%,.7)",
+                                                backgroundColor:
+                                                    "hsla(36,3%,62%,.7)",
+                                                "&:hover": {
+                                                    backgroundColor:
+                                                        "hsla(36,3%,62%,.7)",
+                                                    borderColor:
+                                                        "hsla(45,2%,65%,.7)",
+                                                },
+                                            }}
+                                        >
+                                            STRANGER
+                                        </Button>
+                                    </div>
+                                </IconButton>
+                            </Badge>
+
+                            <Menu
+                                sx={{ mt: "45px" }}
+                                id="menu-appbar"
+                                anchorEl={anchorElUser}
+                                anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                open={Boolean(anchorElUser)}
+                                onClose={handleCloseUserMenu}
                             >
-                                <Avatar
-                                    alt="Profile"
-                                    src="/img/no_avatar.png"
-                                />
-                            </IconButton>
+                                <h1>Hello world</h1>
+                            </Menu>
                         </div>
                     </div>
                 </div>
-                <div className={styles.fav_list}></div>
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    {" "}
+                    <ArrowBackIosRoundedIcon
+                        sx={{
+                            position: "relative",
+                            left: "0px",
+                            color: "#fff",
+                            fontSize: "14px",
+                            zIndex: "10",
+                            width: "40px",
+                        }}
+                    />
+                    <div className={styles.fav_list}>
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                        <Fav_btn />
+                    </div>
+                    <ArrowForwardIosRoundedIcon
+                        sx={{
+                            fontSize: "14px",
+                            position: "relative",
+                            right: "0px",
+                            width: "40px",
+                            color: "#fff",
+                            zIndex: "10",
+                        }}
+                    />
+                </Box>
             </section>
         </>
     );
