@@ -2,6 +2,7 @@
     background-color: #1c202e;
     width: 100%;
     height: 101px;
+    border-bottom: 1px solid #464a58;
 }
 .header {
     height: 60px;
@@ -37,11 +38,19 @@
     display: flex;
     align-items: center;
     height: 41px;
-    border-bottom: 1px solid #464a58;
+
     position: relative;
 }
 .Nav_left {
     background-color: #1e2131;
+    height: 100vh;
+    max-width: 90px;
+}
+/* Trade_nav_right */
+.Trade_nav_right {
+    position: absolute;
+    background-color: #1e2131;
+    right: 0;
     height: 100vh;
     max-width: 90px;
 }

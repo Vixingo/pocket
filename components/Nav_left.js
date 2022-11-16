@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import Nav_items from "./Nav_items";
 import Box from "@mui/material/Box";
@@ -8,8 +8,8 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import { IconButton } from "@mui/material";
-
+import { IconButton, Typography } from "@mui/material";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 function LinkTab(props) {
     return (
         <Tab
@@ -29,15 +29,36 @@ function LinkTab(props) {
 function Nav_left() {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
     return (
         <>
             <section className={styles.Nav_left}>
-                <Nav_items icon={<TrendingUpIcon />} />
-                <Box>
-                    <IconButton>LogOut</IconButton>
+                <Nav_items
+                    icon={<TrendingUpIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    clsName="active"
+                    value="Trade"
+                />
+                <Nav_items
+                    icon={<AttachMoneyIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    value="Finance"
+                />
+                <Box
+                    sx={{
+                        position: "absolute",
+                        bottom: "0",
+                    }}
+                >
+                    <Nav_items
+                        icon={
+                            <ExitToAppIcon sx={{ mb: -1, color: "#8fa5bf" }} />
+                        }
+                        value="Logout"
+                    />
+                    <Box
+                        sx={{
+                            textAlign: "center",
+                            color: "#8fa5bf",
+                        }}
+                    ></Box>
                 </Box>
             </section>
         </>
