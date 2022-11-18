@@ -54,3 +54,14 @@
     height: 100vh;
     max-width: 90px;
 }
+
+@media (max-width: 900px) {
+    .profile_btn {
+        display: none;
+    }
+}
+@media (max-width: 660px) {
+    .header {
+        padding: 0 10px;
+    }
+}

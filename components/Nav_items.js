@@ -12,11 +12,11 @@ function Nav_items(props) {
                     paddingTop: "5px",
                     textAlign: "center",
                     cursor: "pointer",
-                    color: "#fff",
+                    color: !props.clsName ? "#8fa5bf" : "#fff",
                     background: !props.clsName ? "transperant" : "#262B3D",
                     transition: "background-color .2s,color .2s",
                     "&:hover": {
-                        backgroundColor: " rgba(38,43,61,.3)",
+                        backgroundColor: " rgba(38,43,61,.7)",
                     },
                 }}
             >

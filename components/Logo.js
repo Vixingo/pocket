@@ -5,7 +5,11 @@ function Logo() {
     return (
         <>
             {" "}
-            <Box sx={{ width: "200px" }}>
+            <Box
+                sx={{
+                    width: "200px",
+                }}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 5120 1024"

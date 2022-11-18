@@ -3,7 +3,7 @@ import styles from "../styles/Navbar.module.css";
 import Nav_items from "./Nav_items";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import HistoryIcon from "@mui/icons-material/History";
-import { Badge, Box } from "@mui/material";
+import { Badge, Box, ToggleButton } from "@mui/material";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
 function Trade_nav_right() {
@@ -11,12 +11,13 @@ function Trade_nav_right() {
         <>
             <section className={styles.Trade_nav_right}>
                 <Nav_items
-                    icon={<HistoryIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    icon={<HistoryIcon sx={{ mb: -1, color: "inherit" }} />}
                     value="Trades"
+                    clsName="active"
                 />
 
                 <Nav_items
-                    icon={<KeyboardIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    icon={<KeyboardIcon sx={{ mb: -1, color: "inherit" }} />}
                     value="Hotkeys"
                 />
                 <Box
@@ -27,16 +28,10 @@ function Trade_nav_right() {
                 >
                     <Nav_items
                         icon={
-                            <FullscreenIcon sx={{ mb: -1, color: "#8fa5bf" }} />
+                            <FullscreenIcon sx={{ mb: -1, color: "inherit" }} />
                         }
                         value="Fullscreen"
                     />
-                    <Box
-                        sx={{
-                            textAlign: "center",
-                            color: "#8fa5bf",
-                        }}
-                    ></Box>
                 </Box>
             </section>
         </>

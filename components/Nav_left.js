@@ -33,12 +33,12 @@ function Nav_left() {
         <>
             <section className={styles.Nav_left}>
                 <Nav_items
-                    icon={<TrendingUpIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    icon={<TrendingUpIcon sx={{ mb: -1, color: "inherit" }} />}
                     clsName="active"
                     value="Trade"
                 />
                 <Nav_items
-                    icon={<AttachMoneyIcon sx={{ mb: -1, color: "#8fa5bf" }} />}
+                    icon={<AttachMoneyIcon sx={{ mb: -1, color: "inherit" }} />}
                     value="Finance"
                 />
                 <Box
@@ -49,16 +49,10 @@ function Nav_left() {
                 >
                     <Nav_items
                         icon={
-                            <ExitToAppIcon sx={{ mb: -1, color: "#8fa5bf" }} />
+                            <ExitToAppIcon sx={{ mb: -1, color: "inherit" }} />
                         }
                         value="Logout"
                     />
-                    <Box
-                        sx={{
-                            textAlign: "center",
-                            color: "#8fa5bf",
-                        }}
-                    ></Box>
                 </Box>
             </section>
         </>

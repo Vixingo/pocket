@@ -18,7 +18,8 @@ import RedeemIcon from "@mui/icons-material/Redeem";
 import Fav_btn from "./Fav_btn";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import NavDrawer from "./NavDrawer";
 
 // var $ = require("jquery");
 // if (typeof window !== "undefined") {
@@ -107,7 +108,25 @@ function Navbar() {
         <>
             <section className={styles.Navbar}>
                 <div className={styles.header}>
-                    <Logo />
+                    <Box
+                        sx={{
+                            display: "none",
+                            "@media(max-width:900px)": {
+                                display: "block",
+                            },
+                        }}
+                    >
+                        <NavDrawer />
+                    </Box>
+                    <Box
+                        sx={{
+                            "@media(max-width:900px)": {
+                                display: "none",
+                            },
+                        }}
+                    >
+                        <Logo />
+                    </Box>
                     <Button
                         sx={{
                             backgroundColor: "#293145",
@@ -118,6 +137,9 @@ function Navbar() {
                             minWidth: "40px",
                             padding: "0 6px",
                             marginLeft: "30px",
+                            "@media(max-width:660px)": {
+                                marginLeft: "10px",
+                            },
                         }}
                     >
                         <CircularProgressWithLabel value={progress} />
@@ -126,6 +148,9 @@ function Navbar() {
                                 fontSize: "12px",
                                 marginLeft: "7px",
                                 color: "#fff",
+                                "@media(max-width:660px)": {
+                                    display: "none",
+                                },
                             }}
                         >
                             <Typography
@@ -161,6 +186,9 @@ function Navbar() {
                                     height: " 45px",
                                     minWidth: "40px",
                                     padding: "7px 11px",
+                                    "@media(max-width:660px)": {
+                                        display: "none",
+                                    },
                                 }}
                             >
                                 <AccountBalanceWalletIcon color={"#67a9c4"} />
@@ -169,12 +197,14 @@ function Navbar() {
                                         fontSize: "12px",
                                         marginLeft: "7px",
                                         color: "#67a9c4",
+                                        "@media(max-width:1280px)": {
+                                            display: "none",
+                                        },
                                     }}
                                 >
                                     <Typography
                                         sx={{
                                             fontSize: "14px",
-
                                             textAlign: "left",
                                         }}
                                     >
@@ -210,6 +240,9 @@ function Navbar() {
                                     sx={{
                                         fontSize: "12px",
                                         marginLeft: "7px",
+                                        "@media(max-width:1280px)": {
+                                            display: "none",
+                                        },
                                     }}
                                 >
                                     <Typography
@@ -283,30 +316,52 @@ function Navbar() {
                                     "&:hover": {
                                         background: "#025044",
                                     },
+                                    "@media(max-width:1090px)": {
+                                        padding: "7px 11px",
+                                        height: "45px",
+                                        minWidth: "40px",
+                                    },
                                 }}
                             >
-                                <Typography
+                                <AttachMoneyIcon
                                     sx={{
-                                        fontSize: " 18px",
-                                        fontWeight: "700",
-                                        lineHeight: "20px",
-                                        fontFamily: "Exo 2",
-                                        textTransform: "uppercase",
+                                        display: "none",
+                                        "@media(max-width:1090px)": {
+                                            display: "block",
+                                        },
+                                    }}
+                                />
+                                <Box
+                                    sx={{
+                                        "@media(max-width:1090px)": {
+                                            padding: "7px 11px",
+                                            display: "none",
+                                        },
                                     }}
                                 >
-                                    Invest real money
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: "12px",
-                                        fontWeight: "100",
-                                        fontFamily: "Exo 2",
-                                        lineHeight: "14px",
-                                        textTransform: "lowercase",
-                                    }}
-                                >
-                                    Open real account
-                                </Typography>
+                                    <Typography
+                                        sx={{
+                                            fontSize: " 18px",
+                                            fontWeight: "700",
+                                            lineHeight: "20px",
+                                            fontFamily: "Exo 2",
+                                            textTransform: "uppercase",
+                                        }}
+                                    >
+                                        Invest real money
+                                    </Typography>
+                                    <Typography
+                                        sx={{
+                                            fontSize: "12px",
+                                            fontWeight: "100",
+                                            fontFamily: "Exo 2",
+                                            lineHeight: "14px",
+                                            textTransform: "lowercase",
+                                        }}
+                                    >
+                                        Open real account
+                                    </Typography>
+                                </Box>
                             </Button>
                         </div>
                         <div className={styles.profile_btn}>
