@@ -2,3 +2,49 @@
     position: absolute;
     right: 0;
 }
+.High_btn {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    font-family: "Exo 2.0", Arial, sans-serif;
+    font-weight: 700;
+    background-color: #39b54a;
+    color: #2e7924;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    align-items: center;
+    transition: 0.3s;
+}
+.High_btn:hover {
+    box-shadow: 0 3px 10px rgba(64, 203, 83, 0.6);
+    background-color: #40cb53;
+}
+
+.High_btn svg {
+    width: 64px;
+    fill: rgba(32, 110, 35, 0.8) !important;
+}
+.Low_btn {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    font-family: "Exo 2.0", Arial, sans-serif;
+    font-weight: 700;
+    background-color: #f3392c;
+    color: #b81900;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    align-items: center;
+    transition: 0.3s;
+}
+.Low_btn:hover {
+    box-shadow: 0 3px 10px rgba(249, 84, 70, 0.6);
+    background-color: #f95446;
+}
+
+.Low_btn svg {
+    width: 64px;
+    fill: rgba(167, 32, 18, 0.8) !important;
+}
