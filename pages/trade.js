@@ -19,7 +19,6 @@ function trade() {
             >
                 <Nav_left />
                 <MainChart />
-                <Control />
                 <Trade_nav_right />
             </Box>
         </>

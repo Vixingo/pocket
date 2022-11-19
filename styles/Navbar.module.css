@@ -54,7 +54,16 @@
     height: 100vh;
     max-width: 90px;
 }
-
+/* trade */
+.Trades {
+    background-color: #222636;
+    position: fixed;
+    right: 90px;
+    z-index: 90;
+    text-align: center;
+    min-width: 330px;
+    height: 100vh;
+}
 @media (max-width: 900px) {
     .profile_btn {
         display: none;

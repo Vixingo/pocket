@@ -4,7 +4,11 @@ export const appTheme = createTheme({
         primary: {
             main: "#F0B90B",
         },
+        text: {
+            secondary: "#8ea5c0",
+        },
     },
+
     typography: {
         fontFamily: "Open Sans",
         h1: {
