@@ -47,7 +47,22 @@ function Trades(props) {
             <Box
                 className={styles.Trades}
                 sx={{
+                    backgroundColor: "#222636",
+                    position: "relative",
+                    right: "90px",
+                    zIndex: "90",
+                    textAlign: "center",
+                    minWidth: "330px",
+                    height: "100vh",
+                    transition: "0.3s",
                     display: !props.in ? "none" : "block",
+                    "@media(max-width:900px)": {
+                        position: "absolute",
+                        right: "0",
+                        width: "270px",
+                        top: "101px",
+                        height: "calc(100vh - 156px)",
+                    },
                 }}
             >
                 <Box

@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styles from "../styles/Control.module.css";
@@ -25,138 +25,157 @@ function Control(props) {
                         paddingBottom: "20px",
                         margin: "0 auto",
                         border: "1px solid #615f6b",
-                        padding: "25px 15px 15px",
+                        padding: "10px",
                         borderRadius: "6px",
                         height: "unset",
-                        bottom: "150px",
+                        bottom: "65px",
+                        left: "unset",
                         display: "flex",
+                        flexDirection: "column",
                     },
                 }}
             >
                 <Box
                     sx={{
-                        border: "1px solid #535562",
-                        borderRadius: "4px",
-                        maxWidth: "136px",
+                        "@media(max-width:900px)": {
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginBottom: "10px",
+                        },
                     }}
                 >
-                    <Typography
-                        sx={{
-                            color: "text.secondary",
-                            fontSize: "13px",
-                            textAlign: "center",
-                            backgroundColor: "#23283B",
-                            display: "inline",
-                            position: "absolute",
-                            top: "0px",
-                            left: "36%",
-                            padding: "0 4px",
-                        }}
-                    >
-                        {" "}
-                        Time{" "}
-                    </Typography>
-                    <Typography
-                        sx={{
-                            color: "#fff",
-                            fontSize: "19px",
-                            textAlign: "center",
-                            padding: "8px 8px 4px 8px",
-                        }}
-                    >
-                        00:01:00
-                    </Typography>
-                    <Button
-                        sx={{
-                            width: "100%",
-                            borderTop: "1px solid #535562",
-                            padding: "2px",
-                            borderRadius: "0",
-                        }}
-                    >
-                        <AccessTimeIcon sx={{ fontSize: "14px" }} />
-                    </Button>
-                </Box>
-                <br />
-                <Box
-                    sx={{
-                        border: "1px solid #535562",
-                        borderRadius: "4px",
-                        position: "relative",
-                        maxWidth: "136px",
-                    }}
-                >
-                    <Typography
-                        sx={{
-                            color: "text.secondary",
-                            fontSize: "13px",
-                            textAlign: "center",
-                            backgroundColor: "#23283B",
-                            display: "inline",
-                            position: "absolute",
-                            top: "-10px",
-                            left: "29%",
-                            padding: "0 4px",
-                        }}
-                    >
-                        {" "}
-                        Amount{" "}
-                    </Typography>
-                    <Typography
-                        sx={{
-                            color: "#fff",
-                            fontSize: "19px",
-                            textAlign: "center",
-                            padding: "8px 8px 4px 8px",
-                        }}
-                    >
-                        ${amount}
-                    </Typography>
+                    {" "}
                     <Box
                         sx={{
-                            display: "flex",
-                            flexDirection: "row",
+                            border: "1px solid #535562",
+                            borderRadius: "4px",
+                            position: "relative",
+                            maxWidth: "136px",
                         }}
                     >
-                        {" "}
-                        <Button
+                        <Typography
                             sx={{
-                                borderTop: "1px solid #535562",
-                                padding: "2px",
-                                borderRadius: "0",
-                                minWidth: "45px",
-                            }}
-                            onClick={() => {
-                                setAmount(amount - 1);
+                                color: "text.secondary",
+                                fontSize: "11px",
+                                textAlign: "center",
+                                backgroundColor: "#23283B",
+                                display: "inline",
+                                position: "absolute",
+                                top: "-10px",
+                                left: "36%",
+                                padding: "0 4px",
+                                "@media(max-width:900px)": {
+                                    left: "30%",
+                                },
                             }}
                         >
-                            <RemoveRoundedIcon sx={{ fontSize: "14px" }} />
-                        </Button>
-                        <Button
-                            sx={{
-                                borderTop: "1px solid #535562",
-                                borderRadius: "0",
-                                padding: "2px",
+                            {" "}
+                            Time{" "}
+                        </Typography>
 
-                                minWidth: "45px",
+                        <Typography
+                            sx={{
+                                color: "#fff",
+                                fontSize: "19px",
+                                textAlign: "center",
+                                padding: "8px 8px 4px 8px",
                             }}
                         >
-                            <AttachMoneyIcon sx={{ fontSize: "14px" }} />
-                        </Button>
+                            00:01:00
+                        </Typography>
                         <Button
                             sx={{
+                                width: "100%",
                                 borderTop: "1px solid #535562",
                                 padding: "2px",
-
                                 borderRadius: "0",
-                                minWidth: "45px",
-                            }}
-                            onClick={() => {
-                                setAmount(amount + 1);
                             }}
                         >
-                            <AddIcon sx={{ fontSize: "14px" }} />
+                            <AccessTimeIcon sx={{ fontSize: "14px" }} />
                         </Button>
+                    </Box>
+                    <br />
+                    <Box
+                        sx={{
+                            border: "1px solid #535562",
+                            borderRadius: "4px",
+                            position: "relative",
+                            maxWidth: "136px",
+                        }}
+                    >
+                        <Typography
+                            sx={{
+                                color: "text.secondary",
+                                fontSize: "11px",
+                                textAlign: "center",
+                                backgroundColor: "#23283B",
+                                display: "inline",
+                                position: "absolute",
+                                top: "-10px",
+                                left: "29%",
+                                padding: "0 4px",
+                            }}
+                        >
+                            {" "}
+                            Amount{" "}
+                        </Typography>
+                        <Typography
+                            sx={{
+                                color: "#fff",
+                                fontSize: "19px",
+                                textAlign: "center",
+                                padding: "8px 8px 4px 8px",
+                            }}
+                        >
+                            ${amount}
+                        </Typography>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "row",
+                            }}
+                        >
+                            {" "}
+                            <Button
+                                sx={{
+                                    borderTop: "1px solid #535562",
+                                    padding: "2px",
+                                    borderRadius: "0",
+                                    minWidth: "45px",
+                                }}
+                                onClick={() => {
+                                    setAmount(amount - 1);
+                                }}
+                            >
+                                <RemoveRoundedIcon sx={{ fontSize: "14px" }} />
+                            </Button>
+                            <Button
+                                sx={{
+                                    borderTop: "1px solid #535562",
+                                    borderRadius: "0",
+                                    padding: "2px",
+
+                                    minWidth: "45px",
+                                }}
+                            >
+                                <AttachMoneyIcon sx={{ fontSize: "14px" }} />
+                            </Button>
+                            <Button
+                                sx={{
+                                    borderTop: "1px solid #535562",
+                                    padding: "2px",
+
+                                    borderRadius: "0",
+                                    minWidth: "45px",
+                                }}
+                                onClick={() => {
+                                    setAmount(amount + 1);
+                                }}
+                            >
+                                <AddIcon sx={{ fontSize: "14px" }} />
+                            </Button>
+                        </Box>
                     </Box>
                 </Box>
                 <br />
@@ -170,18 +189,15 @@ function Control(props) {
                         borderRadius: "4px",
                         minWidth: "136px",
                         textAlign: "center",
+                        "@media(max-width:900px)": {
+                            maxWidth: "500px",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                        },
                     }}
                 >
-                    <Typography sx={{ fontSize: "13px" }}>Payout</Typography>
-                    <Typography
-                        sx={{
-                            fontSize: "18px",
-                            color: "#6fc274",
-                            fontWeight: "600",
-                        }}
-                    >
-                        +84%
-                    </Typography>
+                    <Typography sx={{ fontSize: "13px" }}>Payout : </Typography>
                     <Typography
                         sx={{
                             fontSize: "12px",
@@ -192,10 +208,22 @@ function Control(props) {
                     </Typography>
                     <Typography
                         sx={{
+                            fontSize: "18px",
+                            color: "#6fc274",
+                            fontWeight: "600",
+                            "@media(max-width:900px)": {
+                                padding: "0 25px",
+                            },
+                        }}
+                    >
+                        +84%
+                    </Typography>
+                    <Typography
+                        sx={{
                             fontSize: "12px",
                         }}
                     >
-                        Profit
+                        Profit :
                     </Typography>
                     <Typography
                         sx={{
@@ -206,7 +234,7 @@ function Control(props) {
                     </Typography>
                 </Box>
 
-                <Box>
+                <Box className={styles.btn_holder}>
                     <button className={styles.High_btn}>
                         {" "}
                         <svg
@@ -219,11 +247,21 @@ function Control(props) {
                                 transform="translate(-44.69 45.233)"
                             ></path>
                         </svg>
-                        Higher
+                        <Typography
+                            sx={{
+                                marginLeft: "auto",
+                                paddingRight: "15px",
+                                fontFamily: "Exo 2.0, Arial",
+                                fontWeight: 700,
+                                fontSize: "14px",
+                            }}
+                        >
+                            Long
+                        </Typography>
                     </button>
-                </Box>
-                <br />
-                <Box>
+
+                    <br />
+
                     <button className={styles.Low_btn}>
                         {" "}
                         <svg
@@ -236,7 +274,17 @@ function Control(props) {
                                 transform="translate(-45.519 26.217)"
                             ></path>
                         </svg>
-                        Lower
+                        <Typography
+                            sx={{
+                                marginLeft: "auto",
+                                paddingRight: "15px",
+                                fontFamily: "Exo 2.0, Arial",
+                                fontWeight: 700,
+                                fontSize: "14px",
+                            }}
+                        >
+                            Short
+                        </Typography>
                     </button>
                 </Box>
             </Box>

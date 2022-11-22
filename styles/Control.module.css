@@ -48,3 +48,24 @@
     width: 64px;
     fill: rgba(167, 32, 18, 0.8) !important;
 }
+
+@media (max-width: 900px) {
+    .btn_holder {
+        display: flex;
+        justify-content: space-between;
+    }
+    .Low_btn {
+        height: 46px;
+        margin: 2px;
+    }
+    .High_btn {
+        margin: 2px;
+        height: 46px;
+    }
+    .Low_btn svg {
+        width: 46px;
+    }
+    .High_btn svg {
+        width: 46px;
+    }
+}
