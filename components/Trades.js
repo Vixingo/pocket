@@ -54,6 +54,7 @@ function Trades(props) {
                     height: "100vh",
                     transition: "0.3s",
                     display: !props.in ? "none" : "block",
+                    zIndex: 100,
                     "@media(max-width:900px)": {
                         position: "absolute",
                         right: "0",
