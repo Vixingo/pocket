@@ -20,7 +20,6 @@ function Control(props) {
                     minWidth: "160px",
                     height: "100vh",
                     padding: "10px",
-                    zIndex: 3,
                     "@media(max-width:900px)": {
                         maxWidth: "500px",
                         paddingBottom: "20px",
