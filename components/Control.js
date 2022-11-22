@@ -29,7 +29,6 @@ function Control(props) {
                         borderRadius: "6px",
                         height: "unset",
                         bottom: "150px",
-
                         display: "flex",
                     },
                 }}

@@ -73,7 +73,13 @@
         display: none;
     }
     .Trade_nav_right {
+        position: fixed;
+        height: unset;
+        min-width: 100%;
+        right: unset;
+        bottom: 0;
         display: flex;
+        justify-content: center;
     }
 }
 @media (max-width: 660px) {

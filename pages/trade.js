@@ -15,6 +15,9 @@ function trade() {
             <Box
                 sx={{
                     display: "flex",
+                    "@media(max-width:900px)": {
+                        flexDirection: "column",
+                    },
                 }}
             >
                 <Nav_left />
