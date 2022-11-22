@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styles from "../styles/Control.module.css";
 import AddIcon from "@mui/icons-material/Add";
@@ -7,17 +7,31 @@ import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 function Control(props) {
+    const [amount, setAmount] = useState(1);
     return (
         <>
             <Box
                 sx={{
-                    transitionDelay: !props.in ? "0.3s" : "0",
+                    transition: !props.in ? ".2s" : "0",
+                    transitionDelay: !props.in ? "0.2s" : "0",
                     position: "absolute",
                     left: !props.in ? "-160px" : "-490px",
                     backgroundColor: "#23283B",
                     minWidth: "160px",
                     height: "100vh",
                     padding: "10px",
+                    "@media(max-width:900px)": {
+                        maxWidth: "500px",
+                        paddingBottom: "20px",
+                        margin: "0 auto",
+                        border: "1px solid #615f6b",
+                        padding: "25px 15px 15px",
+                        borderRadius: "6px",
+                        height: "unset",
+                        bottom: "150px",
+
+                        display: "flex",
+                    },
                 }}
             >
                 <Box
@@ -97,7 +111,7 @@ function Control(props) {
                             padding: "8px 8px 4px 8px",
                         }}
                     >
-                        $1
+                        ${amount}
                     </Typography>
                     <Box
                         sx={{
@@ -112,6 +126,9 @@ function Control(props) {
                                 padding: "2px",
                                 borderRadius: "0",
                                 minWidth: "45px",
+                            }}
+                            onClick={() => {
+                                setAmount(amount - 1);
                             }}
                         >
                             <RemoveRoundedIcon sx={{ fontSize: "14px" }} />
@@ -134,6 +151,9 @@ function Control(props) {
 
                                 borderRadius: "0",
                                 minWidth: "45px",
+                            }}
+                            onClick={() => {
+                                setAmount(amount + 1);
                             }}
                         >
                             <AddIcon sx={{ fontSize: "14px" }} />
@@ -186,7 +206,7 @@ function Control(props) {
                         +$0.84
                     </Typography>
                 </Box>
-                <br />
+
                 <Box>
                     <button className={styles.High_btn}>
                         {" "}

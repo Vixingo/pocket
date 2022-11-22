@@ -9,23 +9,16 @@ import Trades from "./Trades";
 import Control from "./Control";
 
 function Trade_nav_right() {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
 
     const handleClick = () => {
         setOpen(!open);
     };
     return (
         <>
+            <Trades in={open} />
             <section className={styles.Trade_nav_right}>
                 <Control in={open} />
-                <Collapse
-                    in={open}
-                    timeout="auto"
-                    orientation="horizontal"
-                    unmountOnExit
-                >
-                    <Trades />
-                </Collapse>
                 <button onClick={handleClick} style={{ border: "none" }}>
                     <Nav_items
                         icon={<HistoryIcon sx={{ mb: -1, color: "inherit" }} />}
@@ -42,6 +35,9 @@ function Trade_nav_right() {
                     sx={{
                         position: "absolute",
                         bottom: "101px",
+                        "@media(max-width:900px)": {
+                            display: "none",
+                        },
                     }}
                 >
                     <Nav_items

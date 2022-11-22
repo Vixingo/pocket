@@ -36,7 +36,7 @@ function a11yProps(index) {
     };
 }
 
-function Trades() {
+function Trades(props) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -44,7 +44,12 @@ function Trades() {
     };
     return (
         <>
-            <Box className={styles.Trades} sx={{ transition: ".3s" }}>
+            <Box
+                className={styles.Trades}
+                sx={{
+                    display: !props.in ? "none" : "block",
+                }}
+            >
                 <Box
                     component={"div"}
                     sx={{
