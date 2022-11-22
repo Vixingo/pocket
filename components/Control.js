@@ -27,6 +27,7 @@ function Control(props) {
                         border: "1px solid #615f6b",
                         padding: "10px",
                         borderRadius: "6px",
+                        zIndex: "100",
                         height: "unset",
                         bottom: "65px",
                         left: "unset",

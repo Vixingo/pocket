@@ -70,7 +70,6 @@
         right: unset;
         bottom: 0;
         display: flex;
-        z-index: 1000;
         justify-content: center;
     }
 }

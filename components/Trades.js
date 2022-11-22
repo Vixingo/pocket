@@ -49,7 +49,6 @@ function Trades(props) {
                     backgroundColor: "#222636",
                     position: "relative",
                     right: "90px",
-                    zIndex: -100,
                     textAlign: "center",
                     minWidth: "330px",
                     height: "100vh",
