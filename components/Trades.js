@@ -45,12 +45,11 @@ function Trades(props) {
     return (
         <>
             <Box
-                className={styles.Trades}
                 sx={{
                     backgroundColor: "#222636",
                     position: "relative",
                     right: "90px",
-                    zIndex: "90",
+                    zIndex: 90,
                     textAlign: "center",
                     minWidth: "330px",
                     height: "100vh",
