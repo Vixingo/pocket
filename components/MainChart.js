@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
 import styles from "../styles/MainChart.module.css";
-import { Stock } from "@ant-design/plots";
 
 function MainChart() {
     const [data, setData] = useState([]);
