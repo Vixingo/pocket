@@ -6,10 +6,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { IconButton, Typography } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import Link from "next/link";
 function LinkTab(props) {
     return (
         <Tab
@@ -31,15 +31,17 @@ function Nav_left() {
 
     return (
         <>
-            <section className={styles.Nav_left}>
+            <div className={styles.Nav_left}>
                 <Nav_items
                     icon={<TrendingUpIcon sx={{ mb: -1, color: "inherit" }} />}
                     clsName="active"
                     value="Trade"
-                />
+                    href="/trade"
+                />{" "}
                 <Nav_items
                     icon={<AttachMoneyIcon sx={{ mb: -1, color: "inherit" }} />}
                     value="Finance"
+                    href="/finance/deposit"
                 />
                 <Box
                     sx={{
@@ -54,7 +56,7 @@ function Nav_left() {
                         value="Logout"
                     />
                 </Box>
-            </section>
+            </div>
         </>
     );
 }

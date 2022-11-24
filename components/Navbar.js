@@ -15,9 +15,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import PropTypes from "prop-types";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import RedeemIcon from "@mui/icons-material/Redeem";
-import Fav_btn from "./Fav_btn";
-import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import NavDrawer from "./NavDrawer";
 
@@ -430,51 +428,6 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                    }}
-                >
-                    {" "}
-                    <ArrowBackIosRoundedIcon
-                        sx={{
-                            position: "relative",
-                            left: "0px",
-                            color: "#fff",
-                            fontSize: "14px",
-                            zIndex: "10",
-                            width: "40px",
-                        }}
-                    />
-                    <div className={styles.fav_list}>
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                        <Fav_btn />
-                    </div>
-                    <ArrowForwardIosRoundedIcon
-                        sx={{
-                            fontSize: "14px",
-                            position: "relative",
-                            right: "0px",
-                            width: "40px",
-                            color: "#fff",
-                            zIndex: "10",
-                        }}
-                    />
-                </Box>
             </section>
         </>
     );

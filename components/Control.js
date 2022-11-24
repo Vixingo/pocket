@@ -15,13 +15,13 @@ function Control(props) {
                     transition: !props.in ? ".2s" : "0",
                     transitionDelay: !props.in ? "0.2s" : "0",
                     position: "absolute",
-                    left: !props.in ? "-160px" : "-490px",
+                    right: !props.in ? "90px" : "420px",
                     backgroundColor: "#23283B",
                     minWidth: "160px",
-                    height: "100vh",
+                    height: "calc(100vh - 101px)",
                     padding: "10px",
                     "@media(max-width:900px)": {
-                        maxWidth: "500px",
+                        width: "340px",
                         paddingBottom: "20px",
                         margin: "0 auto",
                         border: "1px solid #615f6b",
@@ -29,7 +29,8 @@ function Control(props) {
                         borderRadius: "6px",
                         height: "unset",
                         bottom: "65px",
-                        left: "unset",
+                        right: "50%",
+                        transform: "translateX(50%)",
                         display: "flex",
                         flexDirection: "column",
                     },
@@ -51,7 +52,7 @@ function Control(props) {
                             border: "1px solid #535562",
                             borderRadius: "4px",
                             position: "relative",
-                            maxWidth: "136px",
+                            width: "136px",
                         }}
                     >
                         <Typography
@@ -101,7 +102,7 @@ function Control(props) {
                             border: "1px solid #535562",
                             borderRadius: "4px",
                             position: "relative",
-                            maxWidth: "136px",
+                            width: "136px",
                         }}
                     >
                         <Typography

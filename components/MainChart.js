@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import styles from "../styles/MainChart.module.css";
+import { Stock } from "@ant-design/plots";
+
 function MainChart() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        asyncFetch();
+    }, []);
+    const asyncFetch = () => {
+        fetch(
+            "https://gw.alipayobjects.com/os/antfincdn/ZWgtj7pC%261/stock.json             "
+        )
+            .then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) => {
+                console.log("fetch data failed", error);
+            });
+    };
+    const config = {
+        appendPadding: [0, 10, 0, 0],
+        data,
+        xField: "trade_date",
+        yField: ["open", "close", "high", "low"],
+        slider: {},
+        height: "100%",
+    };
+
     return (
         <>
             <div className={styles.MainChart}>
-                <h1>Chart </h1>
+                {/* <Stock {...config} /> */}
             </div>
         </>
     );

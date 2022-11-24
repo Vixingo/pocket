@@ -1,7 +1,7 @@
 .Navbar {
     background-color: #1c202e;
     width: 100%;
-    height: 101px;
+    height: 60px;
     border-bottom: 1px solid #464a58;
 }
 .header {
@@ -42,7 +42,7 @@
 }
 .Nav_left {
     background-color: #1e2131;
-    height: 100vh;
+    height: calc(100vh - 101px);
     max-width: 90px;
 }
 /* Trade_nav_right */
@@ -50,7 +50,7 @@
     position: absolute;
     background-color: #1e2131;
     right: 0;
-    height: 100vh;
+    height: calc(100vh - 101px);
     max-width: 90px;
 }
 /* trade */

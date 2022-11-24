@@ -1,10 +1,16 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import React from "react";
+import { useRouter } from "next/router";
 
 function Nav_items(props) {
+    const router = useRouter();
     return (
         <>
             <Box
+                onClick={(event) => {
+                    event.preventDefault();
+                    props.href ? router.push(props.href) : "";
+                }}
                 sx={{
                     minWidth: "90px",
                     minHeight: "55px",
@@ -14,7 +20,9 @@ function Nav_items(props) {
                     backgroundColor: "#1e2131",
                     cursor: "pointer",
                     color: !props.clsName ? "#8fa5bf" : "#fff",
-                    background: !props.clsName ? "transperant" : "#262B3D",
+                    background: router.asPath.includes(props.href)
+                        ? "#262B3D"
+                        : "transperant",
                     transition: "background-color .2s,color .2s",
                     "&:hover": {
                         backgroundColor: " rgba(38,43,61,.7)",

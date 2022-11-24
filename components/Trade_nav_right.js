@@ -17,8 +17,8 @@ function Trade_nav_right() {
     return (
         <>
             <Trades in={open} />
+            <Control in={open} />
             <section className={styles.Trade_nav_right}>
-                <Control in={open} />
                 <button onClick={handleClick} style={{ border: "none" }}>
                     <Nav_items
                         icon={<HistoryIcon sx={{ mb: -1, color: "inherit" }} />}
@@ -31,23 +31,22 @@ function Trade_nav_right() {
                     icon={<KeyboardIcon sx={{ mb: -1, color: "inherit" }} />}
                     value="Hotkeys"
                 />
-                <Box
-                    sx={{
-                        position: "absolute",
-                        bottom: "101px",
-                        "@media(max-width:900px)": {
-                            display: "none",
-                        },
-                    }}
-                >
-                    <Nav_items
-                        icon={
-                            <FullscreenIcon sx={{ mb: -1, color: "inherit" }} />
-                        }
-                        value="Fullscreen"
-                    />
-                </Box>
             </section>
+            <Box
+                sx={{
+                    position: "absolute",
+                    bottom: "0px",
+                    right: "0",
+                    "@media(max-width:900px)": {
+                        display: "none",
+                    },
+                }}
+            >
+                <Nav_items
+                    icon={<FullscreenIcon sx={{ mb: -1, color: "inherit" }} />}
+                    value="Fullscreen"
+                />
+            </Box>
         </>
     );
 }
