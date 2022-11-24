@@ -4,7 +4,7 @@ import FinanceHeader from "../../components/FinanceHeader";
 import Navbar from "../../components/Navbar";
 import Nav_left from "../../components/Nav_left";
 
-function subFinance() {
+function SubFinance() {
     const router = useRouter();
     const pageName = router.query.id;
     return (
@@ -22,4 +22,4 @@ function subFinance() {
     );
 }
 
-export default subFinance;
+export default SubFinance;
