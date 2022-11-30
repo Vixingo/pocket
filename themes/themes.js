@@ -7,6 +7,7 @@ export const appTheme = createTheme({
         text: {
             secondary: "#8ea5c0",
         },
+        divider: "#515459",
     },
 
     typography: {

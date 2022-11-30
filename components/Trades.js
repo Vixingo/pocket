@@ -47,11 +47,11 @@ function Trades(props) {
             <Box
                 sx={{
                     backgroundColor: "#222636",
-                    position: "relative",
+                    position: "absolute",
                     right: "90px",
                     textAlign: "center",
                     minWidth: "330px",
-                    height: "100vh",
+                    height: "calc(100vh - 101px)",
                     transition: "0.3s",
                     display: !props.in ? "none" : "block",
                     zIndex: 100,

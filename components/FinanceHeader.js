@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
 import Withdrawal from "./Withdrawal";
+import Deposit from "./Deposit";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -19,8 +20,8 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3, width: "100%" }}>
-                    <Typography>{children}</Typography>
+                <Box sx={{ width: "100%", backgroundColor: "#131628" }}>
+                    {children}
                 </Box>
             )}
         </div>
@@ -48,6 +49,7 @@ function FinanceHeader() {
                     display: "block",
                     backgroundColor: "#202237",
                     width: "100%",
+                    height: "calc(100vh - 60px)",
                 }}
             >
                 {" "}
@@ -110,7 +112,7 @@ function FinanceHeader() {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    Item One
+                    <Deposit />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <Withdrawal />

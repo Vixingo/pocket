@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@ant-design/charts": "^1.4.2",
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
         "@mui/icons-material": "^5.10.9",
@@ -22,5 +23,12 @@
         "react-icons": "^4.6.0",
         "react-slick": "^0.29.0",
         "slick-carousel": "^1.8.1"
+    },
+    "peerDependencies": {
+        "@ant-design/icons": "^4.6.0",
+        "antd": "^4.6.3",
+        "lodash": "^4.17.20",
+        "react": ">=16.8.4",
+        "react-dom": ">=16.8.4"
     }
 }

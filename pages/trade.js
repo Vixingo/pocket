@@ -66,6 +66,7 @@ function trade() {
                 <Box
                     sx={{
                         display: "flex",
+                        backgroundColor: "#1c202e",
                         "@media(max-width:900px)": {
                             flexDirection: "column",
                         },
