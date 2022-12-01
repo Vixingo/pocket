@@ -19,7 +19,7 @@ function D_box() {
                 borderRadius: "4px",
                 padding: "2px 10px",
                 minHeight: "60px",
-                width: "100%",
+
                 minWidth: "200px",
                 textAlign: "center",
                 alignItems: "center",
@@ -51,7 +51,11 @@ function Deposit() {
                     direction="row"
                     justifyContent="space-evenly"
                     alignItems="flex-start"
-                    sx={{ padding: "10px" }}
+                    sx={{
+                        padding: "10px",
+                        height: "calc(100vh - 108px)",
+                        overflow: "scroll",
+                    }}
                 >
                     <Grid item xs={12} md={5}>
                         <Typography
