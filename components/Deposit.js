@@ -12,15 +12,14 @@ import Image from "next/image";
 
 function D_box() {
     return (
-        <Box
+        <Grid item xs={12} md={2} lg={4}
             sx={{
                 backgroundColor: "#293145",
                 color: "#d5d6d8",
                 borderRadius: "4px",
                 padding: "2px 10px",
                 minHeight: "60px",
-
-                minWidth: "200px",
+                minWidth: "190px",
                 textAlign: "center",
                 alignItems: "center",
                 display: "flex",
@@ -38,7 +37,7 @@ function D_box() {
                 <Image src={"/img/vm.png"} width={80} height={40} />
             </Box>
             <Typography sx={{ fontSize: "12px" }}>MasterCard</Typography>
-        </Box>
+        </Grid>
     );
 }
 
@@ -78,21 +77,17 @@ function Deposit() {
                                 <CreditCardRoundedIcon /> &nbsp; Cards
                             </Typography>
                         </Divider>
-                        <Stack>
+                        <Grid container sx={{
+                            marginTop: "-8px",
+                            marginLeft: "-8px"
+                        }} columns={13} justifyContent={"center"}>
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
-                            <D_box />
-                            <D_box />
-                            <D_box />
-                            <D_box />
-                            <D_box />
-                            <D_box />
-                            <D_box />
-                        </Stack>
+                        </Grid>
                     </Grid>
                     <Grid item xs={12} md={5} sx={{ backgroundColor: "blue" }}>
                         asd
