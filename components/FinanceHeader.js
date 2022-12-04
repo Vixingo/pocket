@@ -9,7 +9,6 @@ import Withdrawal from "./Withdrawal";
 import Deposit from "./Deposit";
 import Cashback from "./Cashback";
 
-
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -42,6 +41,7 @@ function FinanceHeader() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
     const router = useRouter();
 
     return (
@@ -64,7 +64,9 @@ function FinanceHeader() {
                     <Tabs
                         value={value}
                         onChange={handleChange}
-                        aria-label="basic tabs example"
+                        variant="scrollable"
+                        scrollButtons
+                        allowScrollButtonsMobile
                         sx={{
                             width: "100%",
                         }}

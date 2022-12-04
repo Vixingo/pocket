@@ -9,17 +9,19 @@ import {
 import React from "react";
 import CreditCardRoundedIcon from "@mui/icons-material/CreditCardRounded";
 import Image from "next/image";
+import NavFooter from "./NavFooter";
 
 function D_box() {
     return (
-        <Grid item xs={12} md={2} lg={4}
+        <Box
             sx={{
                 backgroundColor: "#293145",
                 color: "#d5d6d8",
                 borderRadius: "4px",
                 padding: "2px 10px",
                 minHeight: "60px",
-                minWidth: "190px",
+
+                minWidth: "200px",
                 textAlign: "center",
                 alignItems: "center",
                 display: "flex",
@@ -37,7 +39,7 @@ function D_box() {
                 <Image src={"/img/vm.png"} width={80} height={40} />
             </Box>
             <Typography sx={{ fontSize: "12px" }}>MasterCard</Typography>
-        </Grid>
+        </Box>
     );
 }
 
@@ -53,7 +55,7 @@ function Deposit() {
                     sx={{
                         padding: "10px",
                         height: "calc(100vh - 108px)",
-                        overflow: "scroll",
+                        overflowY: "scroll",
                     }}
                 >
                     <Grid item xs={12} md={5}>
@@ -77,21 +79,26 @@ function Deposit() {
                                 <CreditCardRoundedIcon /> &nbsp; Cards
                             </Typography>
                         </Divider>
-                        <Grid container sx={{
-                            marginTop: "-8px",
-                            marginLeft: "-8px"
-                        }} columns={13} justifyContent={"center"}>
+                        <Stack sx={{ marginTop: "-8px", marginLeft: "-8px" }}>
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
                             <D_box />
-                        </Grid>
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                        </Stack>
                     </Grid>
                     <Grid item xs={12} md={5} sx={{ backgroundColor: "blue" }}>
                         asd
                     </Grid>
+                    <NavFooter />
                 </Grid>
             </div>
         </>

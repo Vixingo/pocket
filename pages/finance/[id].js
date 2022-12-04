@@ -9,14 +9,16 @@ function SubFinance() {
     const pageName = router.query.id;
     return (
         <>
-            <Navbar />
-            <Box
-                sx={{
-                    display: "flex",
-                }}
-            >
-                <Nav_left />
-                <FinanceHeader />
+            <Box component={"div"} sx={{ overflow: "hidden" }}>
+                <Navbar />
+                <Box
+                    sx={{
+                        display: "flex",
+                    }}
+                >
+                    <Nav_left />
+                    <FinanceHeader />
+                </Box>
             </Box>
         </>
     );
