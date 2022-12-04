@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
 import Withdrawal from "./Withdrawal";
 import Deposit from "./Deposit";
+import Cashback from "./Cashback";
 
 
 function TabPanel(props) {
@@ -119,10 +120,10 @@ function FinanceHeader() {
                     <Withdrawal />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    Item 3
+                    item3
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    Item 4
+                    <Cashback />
                 </TabPanel>
                 <TabPanel value={value} index={4}>
                     Item 5
