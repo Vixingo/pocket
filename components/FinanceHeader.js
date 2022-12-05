@@ -8,7 +8,12 @@ import { useRouter } from "next/router";
 import Withdrawal from "./Withdrawal";
 import Deposit from "./Deposit";
 import Cashback from "./Cashback";
-
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import RestoreIcon from "@mui/icons-material/Restore";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ArchiveIcon from "@mui/icons-material/Archive";
+import Paper from "@mui/material/Paper";
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -69,6 +74,9 @@ function FinanceHeader() {
                         allowScrollButtonsMobile
                         sx={{
                             width: "100%",
+                            "@media(max-width:900px)": {
+                                display: "none",
+                            },
                         }}
                     >
                         <Tab
@@ -134,6 +142,41 @@ function FinanceHeader() {
                     Item 6
                 </TabPanel>
             </Box>
+            <Paper
+                sx={{
+                    backgroundColor: "#202434",
+                    position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    display: "none",
+                    "@media(max-width:900px)": {
+                        display: "block",
+                    },
+                }}
+                elevation={3}
+            >
+                <BottomNavigation
+                    showLabels
+                    value={value}
+                    onChange={(event, newValue) => {
+                        setValue(newValue);
+                    }}
+                >
+                    <BottomNavigationAction
+                        label="Recents"
+                        icon={<RestoreIcon />}
+                    />
+                    <BottomNavigationAction
+                        label="Favorites"
+                        icon={<FavoriteIcon />}
+                    />
+                    <BottomNavigationAction
+                        label="Archive"
+                        icon={<ArchiveIcon />}
+                    />
+                </BottomNavigation>
+            </Paper>
         </>
     );
 }
