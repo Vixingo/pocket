@@ -13,32 +13,31 @@ import NavFooter from "./NavFooter";
 
 function D_box() {
     return (
-        <Box
-            sx={{
-                backgroundColor: "#293145",
-                color: "#d5d6d8",
-                borderRadius: "4px",
-                padding: "2px 10px",
-                minHeight: "60px",
-
-                minWidth: "200px",
-                textAlign: "center",
-                alignItems: "center",
-                display: "flex",
-                marginTop: "8px",
-                marginLeft: "8px",
-            }}
-        >
+        <Box className="col-lg-6 col-md-4 col-sm-6 ">
             <Box
                 sx={{
+                    backgroundColor: "#293145",
+                    color: "#d5d6d8",
+                    borderRadius: "4px",
+                    padding: "2px 10px",
+                    minHeight: "60px",
+                    textAlign: "center",
+                    alignItems: "center",
                     display: "flex",
-                    flex: "0 0 80px",
-                    marginRight: "7px",
+                    marginBottom: "10px",
                 }}
             >
-                <Image src={"/img/vm.png"} width={80} height={40} />
+                <Box
+                    sx={{
+                        display: "flex",
+                        flex: "0 0 80px",
+                        marginRight: "7px",
+                    }}
+                >
+                    <Image src={"/img/vm.png"} width={80} height={40} />
+                </Box>
+                <Typography sx={{ fontSize: "12px" }}>MasterCard</Typography>
             </Box>
-            <Typography sx={{ fontSize: "12px" }}>MasterCard</Typography>
         </Box>
     );
 }
@@ -46,19 +45,17 @@ function D_box() {
 function Deposit() {
     return (
         <>
-            <div className="Deposit">
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="space-evenly"
-                    alignItems="flex-start"
-                    sx={{
-                        padding: "10px",
-                        height: "calc(100vh - 108px)",
-                        overflowY: "scroll",
-                    }}
-                >
-                    <Grid item xs={12} md={5}>
+            <Box
+                className="Deposit "
+                sx={{
+                    height: "calc(100vh - 108px)",
+                    overflowY: "scroll",
+                    overflowX: "hidden",
+                    width: "100%",
+                }}
+            >
+                <Box className="row" sx={{ padding: "20px" }}>
+                    <Box className="col-lg-6 ">
                         <Typography
                             sx={{
                                 color: "#fff",
@@ -79,7 +76,7 @@ function Deposit() {
                                 <CreditCardRoundedIcon /> &nbsp; Cards
                             </Typography>
                         </Divider>
-                        <Stack sx={{ marginTop: "-8px", marginLeft: "-8px" }}>
+                        <Box className="row">
                             <D_box />
                             <D_box />
                             <D_box />
@@ -93,14 +90,29 @@ function Deposit() {
                             <D_box />
                             <D_box />
                             <D_box />
-                        </Stack>
-                    </Grid>
-                    <Grid item xs={12} md={5} sx={{ backgroundColor: "blue" }}>
-                        asd
-                    </Grid>
-                    <NavFooter />
-                </Grid>
-            </div>
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                            <D_box />
+                        </Box>
+                    </Box>
+                    <Box className="col-lg-6">
+                        <div className="row">
+                            <div className="col-md-6"> Heloo</div>
+                            <div className="col-md-6"> gelo</div>
+                        </div>
+                    </Box>
+                </Box>
+                <NavFooter />
+            </Box>
         </>
     );
 }

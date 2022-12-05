@@ -9,7 +9,12 @@ import Withdrawal from "./Withdrawal";
 import Deposit from "./Deposit";
 import PromoCode from "./PromoCode";
 import Cashback from "./Cashback";
-
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import RestoreIcon from "@mui/icons-material/Restore";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ArchiveIcon from "@mui/icons-material/Archive";
+import Paper from "@mui/material/Paper";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -43,6 +48,7 @@ function FinanceHeader() {
 
   const router = useRouter();
 
+<<<<<<< HEAD
   return (
     <>
       <Box
@@ -135,6 +141,138 @@ function FinanceHeader() {
       </Box>
     </>
   );
+=======
+    return (
+        <>
+            <Box
+                sx={{
+                    display: "block",
+                    backgroundColor: "#202237",
+                    width: "100%",
+                    height: "calc(100vh - 60px)",
+                }}
+            >
+                {" "}
+                <Box
+                    sx={{
+                        borderBottom: 1,
+                        borderColor: "divider",
+                    }}
+                >
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        variant="scrollable"
+                        scrollButtons
+                        allowScrollButtonsMobile
+                        sx={{
+                            width: "100%",
+                            "@media(max-width:900px)": {
+                                display: "none",
+                            },
+                        }}
+                    >
+                        <Tab
+                            label="DEPOSIT"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/deposit");
+                            }}
+                        />
+                        <Tab
+                            label="WITHDRAWAL"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/withdrawal");
+                            }}
+                        />
+                        <Tab
+                            label="HISTORY"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/history");
+                            }}
+                        />
+                        <Tab
+                            label="cashback"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/cashback");
+                            }}
+                        />
+                        <Tab
+                            label="promo codes"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/promo");
+                            }}
+                        />
+                        <Tab
+                            label="my safe"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                router.push("/finance/my-safe");
+                            }}
+                        />
+                    </Tabs>
+                </Box>
+                <TabPanel value={value} index={0}>
+                    <Deposit />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <Withdrawal />
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    item3
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                    <Cashback />
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                    Item 5
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                    Item 6
+                </TabPanel>
+            </Box>
+            <Paper
+                sx={{
+                    backgroundColor: "#202434",
+                    position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    display: "none",
+                    "@media(max-width:900px)": {
+                        display: "block",
+                    },
+                }}
+                elevation={3}
+            >
+                <BottomNavigation
+                    showLabels
+                    value={value}
+                    onChange={(event, newValue) => {
+                        setValue(newValue);
+                    }}
+                >
+                    <BottomNavigationAction
+                        label="Recents"
+                        icon={<RestoreIcon />}
+                    />
+                    <BottomNavigationAction
+                        label="Favorites"
+                        icon={<FavoriteIcon />}
+                    />
+                    <BottomNavigationAction
+                        label="Archive"
+                        icon={<ArchiveIcon />}
+                    />
+                </BottomNavigation>
+            </Paper>
+        </>
+    );
+>>>>>>> ef39f37c8194a8d5697f0c76579ff41f9f0497c2
 }
 
 export default FinanceHeader;
