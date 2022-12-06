@@ -37,3 +37,75 @@ a {
         background: black;
     }
 } */
+/*Deposit */
+.user_level_block {
+    border-radius: 3px;
+    border: 1px dashed;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.user_st {
+    background: hsla(40, 3%, 82%, 0.1);
+    border-color: #edeceb;
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 0 0 7px 1px hsla(40, 4%, 84%, 0.7);
+}
+.user_st:hover {
+    background: hsla(36, 3%, 62%, 0.2);
+}
+.user_nb {
+    background: rgba(198, 38, 164, 0.1);
+    border-color: rgba(198, 38, 104, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_nb:hover {
+    background: rgba(198, 38, 164, 0.2);
+}
+.user_beg {
+    background: rgba(64, 113, 39, 0.1);
+    border-color: rgba(77, 144, 42, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_beg:hover {
+    background: rgba(64, 113, 39, 0.2);
+}
+.user_ex {
+    background: rgba(198, 193, 38, 0.1);
+    border-color: rgba(198, 193, 38, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_ex:hover {
+    background: rgba(198, 193, 38, 0.2);
+}
+.user_ms {
+    background: rgba(198, 119, 38, 0.1);
+    border-color: rgba(198, 134, 38, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_ms:hover {
+    background: rgba(198, 119, 38, 0.2);
+}
+.user_pro {
+    background: rgba(122, 38, 198, 0.1);
+    border-color: rgba(129, 38, 198, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_pro:hover {
+    background: rgba(122, 38, 198, 0.2);
+}
+.user_guru {
+    background: rgba(38, 95, 198, 0.1);
+    border-color: rgba(38, 102, 196, 0.5);
+    font-size: 14px;
+    color: #fff;
+}
+.user_guru:hover {
+    background: rgba(38, 95, 198, 0.2);
+}
