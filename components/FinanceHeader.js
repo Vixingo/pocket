@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
 import Withdrawal from "./Withdrawal";
 import Deposit from "./Deposit";
+import PromoCode from "./PromoCode";
 import Cashback from "./Cashback";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -14,6 +15,7 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import Paper from "@mui/material/Paper";
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 

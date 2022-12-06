@@ -10,7 +10,6 @@ function NavFooter({ position }) {
                     padding: "20px",
                     position: position ? position : "static",
                     bottom: "0",
-                    width: "100%",
                 }}
             >
                 <Typography sx={{ fontSize: "10px" }}>

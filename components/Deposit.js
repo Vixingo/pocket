@@ -54,7 +54,7 @@ function Deposit() {
     return (
         <>
             <Box
-                className="Deposit "
+                className="Deposit"
                 sx={{
                     height: "calc(100vh - 108px)",
                     overflowY: "scroll",
