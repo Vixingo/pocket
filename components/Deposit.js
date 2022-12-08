@@ -222,7 +222,7 @@ function Deposit() {
                                         <CreditCardIcon
                                             sx={{ color: "#009eff" }}
                                         />{" "}
-                                        Minimum withdrawal amount: $10
+                                        Minimum withdrawal amount: $50
                                     </Typography>
                                 </Box>
                             </div>

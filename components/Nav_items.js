@@ -17,7 +17,7 @@ function Nav_items(props) {
                     paddingBottom: "5px",
                     paddingTop: "5px",
                     textAlign: "center",
-                    backgroundColor: "#1e2131",
+                    backgroundColor: "#181A20",
                     cursor: "pointer",
                     color: !props.clsName ? "#8fa5bf" : "#fff",
                     background: router.asPath.includes(props.href)

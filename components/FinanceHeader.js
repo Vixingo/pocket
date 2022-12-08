@@ -138,7 +138,7 @@ function FinanceHeader() {
                     <Cashback />
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                    Item 5
+                    <PromoCode />
                 </TabPanel>
                 <TabPanel value={value} index={5}>
                     Item 6

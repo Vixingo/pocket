@@ -1,5 +1,5 @@
 .Navbar {
-    background-color: #1c202e;
+    background-color: #181a20;
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #464a58;
@@ -9,7 +9,7 @@
     padding: 0px 29px;
     display: flex;
     align-items: center;
-    background-color: #1c202e;
+    background-color: #181a20;
     border-bottom: 1px solid #464a58;
 }
 .header_right {
@@ -41,14 +41,14 @@
     position: relative;
 }
 .Nav_left {
-    background-color: #1e2131;
+    background-color: #181a20;
     height: calc(100vh - 101px);
     max-width: 90px;
 }
 /* Trade_nav_right */
 .Trade_nav_right {
     position: absolute;
-    background-color: #1e2131;
+    background-color: #181a20;
     right: 0;
     height: calc(100vh - 101px);
     max-width: 90px;

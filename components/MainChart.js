@@ -85,7 +85,7 @@ function MainChart() {
         <>
             <Box
                 sx={{
-                    backgroundColor: "#1c202e",
+                    backgroundColor: "#181A20",
                     width: "100%",
                     marginRight: "250px",
                     height: "calc(100vh - 101px)",

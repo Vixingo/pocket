@@ -6,7 +6,7 @@ function Fav_btn() {
         <>
             <Box
                 sx={{
-                    backgroundColor: " rgba(58,70,90,.8)",
+                    backgroundColor: "#181A20",
                     borderColor: "#505b6d",
                     padding: "5px 5px ",
                     minWidth: "170px",
