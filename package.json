@@ -24,6 +24,7 @@
         "react-dom": ">=16.8.4",
         "react-icons": "^4.6.0",
         "react-slick": "^0.29.0",
+        "rsuite": "^5.23.1",
         "slick-carousel": "^1.8.1"
     },
     "peerDependencies": {

@@ -13,6 +13,7 @@ function Cashback() {
                     overflowY: "scroll",
                     overflowX: "hidden",
                     width: "100%",
+                    background: "#181a20",
                 }}
             >
                 <Grid container sx={{ padding: "50px" }}>
@@ -283,7 +284,7 @@ function Cashback() {
                                 >
                                     5. You can withdraw your refunded cashback
                                     at any moment if you have enough funds on
-                                    your Real account's balance.
+                                    your Real account&apos;s balance.
                                 </Typography>
                                 <Typography
                                     sx={{ fontSize: "12px", color: "#fff" }}
@@ -363,7 +364,7 @@ function Cashback() {
                                         color: "#fff",
                                     }}
                                 >
-                                    You don't have active Cashback at the
+                                    You don&apos;t have active Cashback at the
                                     moment.
                                 </Typography>
                             </Box>

@@ -9,7 +9,7 @@ function Withdrawal() {
             <Box sx={{ boxShadow: "Withdrawal" }}>
                 <Box
                     sx={{
-                        backgroundColor: "#131628",
+                        backgroundColor: "#181a20",
                         padding: "15px",
                         color: "#fff",
                     }}

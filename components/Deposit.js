@@ -42,7 +42,12 @@ function D_box() {
                         marginRight: "7px",
                     }}
                 >
-                    <Image src={"/img/vm.png"} width={80} height={40} />
+                    <Image
+                        src={"/img/vm.png"}
+                        width={80}
+                        height={40}
+                        alt="card image"
+                    />
                 </Box>
                 <Typography sx={{ fontSize: "12px" }}>MasterCard</Typography>
             </Box>
@@ -60,6 +65,7 @@ function Deposit() {
                     overflowY: "scroll",
                     overflowX: "hidden",
                     width: "100%",
+                    background: "#181a20",
                 }}
             >
                 <Box

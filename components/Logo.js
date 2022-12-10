@@ -11,7 +11,7 @@ function Logo() {
                     width: "200px",
                 }}
             >
-                <Image src="/img/logo.png" width={200} height={50} />
+                <Image src="/img/logo.png" width={200} height={50} alt="logo" />
             </Box>
         </>
     );

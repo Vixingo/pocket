@@ -16,7 +16,7 @@ function Control(props) {
                     transitionDelay: !props.in ? "0.2s" : "0",
                     position: "absolute",
                     right: !props.in ? "90px" : "420px",
-                    backgroundColor: "#23283B",
+                    backgroundColor: "#181a20",
                     minWidth: "160px",
                     height: "calc(100vh - 101px)",
                     padding: "10px",

@@ -46,7 +46,7 @@ function Trades(props) {
         <>
             <Box
                 sx={{
-                    backgroundColor: "#222636",
+                    backgroundColor: "#181a20",
                     position: "absolute",
                     right: "90px",
                     textAlign: "center",
