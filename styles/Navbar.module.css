@@ -4,6 +4,7 @@
     height: 60px;
     border-bottom: 1px solid #464a58;
 }
+
 .header {
     height: 60px;
     padding: 0px 29px;
@@ -12,27 +13,33 @@
     background-color: #181a20;
     border-bottom: 1px solid #464a58;
 }
+
 .header_right {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
+
 .safe {
     padding: 0 10px;
 }
+
 .balance {
     padding-left: 10px;
     padding-right: 10px;
     color: #fff;
 }
+
 .open_real {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .profile_btn {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .fav_list {
     overflow-x: scroll;
     display: flex;
@@ -40,11 +47,13 @@
     height: 41px;
     position: relative;
 }
+
 .Nav_left {
     background-color: #181a20;
     height: calc(100vh - 101px);
     max-width: 90px;
 }
+
 /* Trade_nav_right */
 .Trade_nav_right {
     position: absolute;
@@ -53,12 +62,268 @@
     height: calc(100vh - 101px);
     max-width: 90px;
 }
+
 /* trade */
+
+/* Profile Box */
+
+.profilebox {
+    display: flex;
+}
+
+.profilediv1 {
+    width: 365px;
+    padding: 20px 30px;
+}
+
+.profilediv2 {
+    width: 197px;
+    background-color: rgba(38, 44, 65, .9);
+    padding: 17px 0;
+}
+
+.profilediv2 a {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 9px 30px;
+    text-decoration: none;
+    color: #8ea5c0;
+}
+
+.profilediv2 a:hover {
+    background-color: #364059;
+    color: #fff;
+}
+
+.profiledetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.profilenames {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.profileimg2 {
+    position: relative;
+    display: block;
+}
+
+.profileimg img {
+    border-radius: 50%;
+    border: 1px solid #bdbab5;
+}
+
+.profileimg img:hover {
+    background: hsla(36, 3%, 62%, .2);
+    -webkit-box-shadow: 0 0 7px 1px #a7a4a0;
+    box-shadow: 0 0 7px 1px #a7a4a0;
+}
+
+.profileimg button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    background-color: hsla(36, 3%, 62%, .7);
+    border: 1px solid #a7a6a3;
+    color: #fff;
+    border-radius: 3px;
+    font-family: "Exo 2.0", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    padding: 0 8px;
+}
+
+.profilename1 {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.profilename1 img {
+    margin-right: 7px;
+    margin-top: 0px;
+    width: 14px;
+}
+
+.profilename1 p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.profilename2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -2px;
+}
+
+.profilename2 path {
+    color: #8fa5bf;
+}
+
+.profilename2 span {
+    font-size: 12px;
+    color: #fff;
+    padding-left: 4px;
+}
+
+.profilebtn1 button {
+    width: 100%;
+    background-color: #531b1f;
+    color: white;
+    -webkit-box-shadow: 0 0 4px 2px rgb(245 41 20 / 30%);
+    box-shadow: 0 0 4px 2px rgb(245 41 20 / 30%);
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 1px solid #f52914;
+    border-radius: 3px;
+    font-family: "Exo 2.0", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 0 8px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.staticsbox {
+    background-color: #1f2536;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    padding: 10px 15px 15px;
+}
+
+.staticsitem1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.staticsitem1 p {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.staticsitem1 path {
+    color: #8ea5c0;
+}
+
+.staticsitem2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.staticsitem2 p {
+    color: #8fa5bf;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.staticsitem2 span {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.profilebtn2 button {
+    width: 100%;
+    display: block;
+    font-size: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #172832;
+    border: 1px solid #025b44;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Open Sans, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4285;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: color .3s, background-color .3s;
+    transition: color .3s, background-color .3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.profilebtn2 button:hover {
+    background-color: #025b44;
+}
+
+.identies {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 4px;
+}
+
+.identies p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.unverify {
+    color: #e6a22d;
+    border-bottom: 1px dashed #e6a22d;
+}
+
+.unverify svg {
+    font-size: 16px;
+    padding-bottom: 3px;
+}
+
+.unverify path {
+    color: #e6a22d;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 900px) {
     .profile_btn {
         display: none;
     }
+
     .Nav_left {
         display: none;
     }
@@ -73,6 +338,7 @@
         justify-content: center;
     }
 }
+
 @media (max-width: 660px) {
     .header {
         padding: 0 10px;

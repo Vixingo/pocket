@@ -19,6 +19,15 @@ import RedeemIcon from "@mui/icons-material/Redeem";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import NavDrawer from "./NavDrawer";
 
+import PersonIcon from "@mui/icons-material/Person";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import EmailIcon from "@mui/icons-material/Email";
+import WalletIcon from "@mui/icons-material/Wallet";
+import PublicIcon from "@mui/icons-material/Public";
+import CachedIcon from "@mui/icons-material/Cached";
+import WarningIcon from "@mui/icons-material/Warning";
+import Image from "next/image";
+
 // var $ = require("jquery");
 // if (typeof window !== "undefined") {
 //     window.$ = window.jQuery = require("jquery");
@@ -408,7 +417,7 @@ function Navbar() {
                             </Badge>
 
                             <Menu
-                                sx={{ mt: "45px" }}
+                                sx={{ mt: "45px", p: "0" }}
                                 id="menu-appbar"
                                 anchorEl={anchorElUser}
                                 anchorOrigin={{
@@ -423,7 +432,222 @@ function Navbar() {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-                                <h1>Hello world</h1>
+                                {" "}
+                                <Box
+                                    sx={{
+                                        background: "#181a20",
+                                        width: "558px",
+                                    }}
+                                >
+                                    <div className={styles.profilebox}>
+                                        <div className={styles.profilediv1}>
+                                            <div
+                                                className={
+                                                    styles.profiledetails
+                                                }
+                                            >
+                                                <div
+                                                    className={
+                                                        styles.profileimg
+                                                    }
+                                                >
+                                                    <div
+                                                        className={
+                                                            styles.profileimg2
+                                                        }
+                                                    >
+                                                        <Image
+                                                            src={
+                                                                "/img/no_avatar.png"
+                                                            }
+                                                            height={98}
+                                                            width={98}
+                                                            alt={"userimg"}
+                                                        />
+                                                        <button>
+                                                            STRANGER
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.profilenames
+                                                    }
+                                                >
+                                                    <div
+                                                        className={
+                                                            styles.profilename1
+                                                        }
+                                                    >
+                                                        <Image
+                                                            src={
+                                                                "/img/UNKNOWN.png"
+                                                            }
+                                                            height={10}
+                                                            width={14}
+                                                            alt={"unknown"}
+                                                        />
+                                                        <p>Unknown Client</p>
+                                                    </div>
+                                                    <div
+                                                        className={
+                                                            styles.profilename2
+                                                        }
+                                                    >
+                                                        <div
+                                                            className={
+                                                                styles.profilename21
+                                                            }
+                                                        >
+                                                            <PersonIcon fontSize="10px" />
+                                                            <span>
+                                                                id 38330819
+                                                            </span>
+                                                        </div>
+                                                        <VisibilityOffIcon fontSize="10px" />
+                                                    </div>
+                                                    <div
+                                                        className={
+                                                            styles.profilename2
+                                                        }
+                                                    >
+                                                        <div
+                                                            className={
+                                                                styles.profilename21
+                                                            }
+                                                        >
+                                                            <EmailIcon fontSize="10px" />
+                                                            <span>
+                                                                341e3f95ce...@demo.ru
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        className={
+                                                            styles.profilename2
+                                                        }
+                                                    >
+                                                        <div
+                                                            className={
+                                                                styles.profilename21
+                                                            }
+                                                        >
+                                                            <WalletIcon fontSize="10px" />
+                                                            <span>
+                                                                $10000.00
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        className={
+                                                            styles.profilename2
+                                                        }
+                                                    >
+                                                        <div
+                                                            className={
+                                                                styles.profilename21
+                                                            }
+                                                        >
+                                                            <PublicIcon fontSize="10px" />
+                                                            <span>
+                                                                103.74.230.219
+                                                            </span>
+                                                        </div>
+                                                        <Image
+                                                            src={
+                                                                "/img/UNKNOWN.png"
+                                                            }
+                                                            height={14}
+                                                            width={18}
+                                                            alt={"unknown"}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={styles.profilebtn1}>
+                                                <button>
+                                                    YOU ARE TRADING ON DEMO
+                                                    ACCOUNT
+                                                </button>
+                                            </div>
+                                            <div className={styles.staticsbox}>
+                                                <div
+                                                    className={
+                                                        styles.staticsitem1
+                                                    }
+                                                >
+                                                    <p>
+                                                        Real account statistics
+                                                        for today:
+                                                    </p>
+                                                    <CachedIcon fontSize="14px" />
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.staticsitem2
+                                                    }
+                                                >
+                                                    <p>Trades:</p>
+                                                    <span>0</span>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.staticsitem2
+                                                    }
+                                                >
+                                                    <p>Trading turnover:</p>
+                                                    <span>$0</span>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.staticsitem2
+                                                    }
+                                                >
+                                                    <p>Net turnover:</p>
+                                                    <span>$0</span>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.staticsitem2
+                                                    }
+                                                >
+                                                    <p>Trading profit:</p>
+                                                    <span>$0</span>
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.profilebtn2
+                                                    }
+                                                >
+                                                    <button>
+                                                        Real account overall
+                                                        statistics
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className={styles.identies}>
+                                                <p>Identity status:</p>
+                                                <div
+                                                    className={styles.unverify}
+                                                >
+                                                    <WarningIcon fontSize="16px" />
+                                                    <span>Unverified</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className={styles.profilediv2}>
+                                            <a href="#">Profile</a>
+                                            <a href="#">Deposit</a>
+                                            <a href="#">Withdrawal</a>
+                                            <a href="#">Notifications</a>
+                                            <a href="#">Support</a>
+                                            <a href="#">News</a>
+                                            <a href="#">Settings</a>
+                                            <a href="#">Open Real Account</a>
+                                            <a href="#">Login</a>
+                                        </div>
+                                    </div>
+                                </Box>
                             </Menu>
                         </div>
                     </div>

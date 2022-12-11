@@ -89,8 +89,20 @@ function MainChart() {
                     width: "100%",
                     marginRight: "250px",
                     height: "calc(100vh - 101px)",
+                    position: "relative",
                 }}
             >
+                <Box
+                    sx={{
+                        position: "absolute",
+                        left: "0",
+                        top: "0",
+                        zIndex: "111",
+                        background: "red",
+                    }}
+                >
+                    {/* <h1>Hello world</h1> */}
+                </Box>
                 <Stock {...config} />
             </Box>
         </>

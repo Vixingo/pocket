@@ -109,3 +109,12 @@ a {
 .user_guru:hover {
     background: rgba(38, 95, 198, 0.2);
 }
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.css-1tuk91-MuiInputBase-root-MuiOutlinedInput-root {
+    color: #fff;
+}
+.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+    padding: 0;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-1tuk91-MuiInputBase-root-MuiOutlinedInput-root {
+    color: #fff;
+}

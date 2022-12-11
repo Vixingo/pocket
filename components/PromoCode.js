@@ -22,9 +22,9 @@ function PromoCode() {
                 sx={{ display: "flex", background: "#181a20", padding: "20px" }}
             >
                 <Paper
-                    elevation={3}
+                    elevation={9}
                     sx={{
-                        background: "#383838",
+                        background: "#181a20",
                         padding: "17px",
                         width: "280px",
                         textAlign: "center",
@@ -55,8 +55,9 @@ function PromoCode() {
                     />
                 </Paper>
                 <Paper
+                    elevation={9}
                     sx={{
-                        background: "#383838",
+                        background: "#181a20",
                         padding: "17px",
                         marginLeft: "20px",
                     }}
