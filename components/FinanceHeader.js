@@ -159,27 +159,46 @@ function FinanceHeader() {
                         display: "block",
                     },
                 }}
-                elevation={3}
+                elevation={9}
             >
                 <BottomNavigation
                     showLabels
                     value={value}
+                    sx={{ background: "#181a20" }}
                     onChange={(event, newValue) => {
                         setValue(newValue);
                     }}
                 >
                     <BottomNavigationAction
-                        label="Recents"
+                        sx={{ p: "0" }}
                         icon={<RestoreIcon />}
+                        label="Deposit"
                     />
                     <BottomNavigationAction
-                        label="Favorites"
+                        sx={{ p: "0" }}
+                        label="Withdrawal"
                         icon={<FavoriteIcon />}
                     />
                     <BottomNavigationAction
-                        label="Archive"
+                        sx={{ p: "0" }}
+                        label={"History"}
                         icon={<ArchiveIcon />}
                     />
+                    {/* <BottomNavigationAction
+                        sx={{ p: "0" }}
+                        label="Cashback"
+                        icon={<ArchiveIcon />}
+                    />
+                    <BottomNavigationAction
+                        sx={{ p: "0" }}
+                        label="Promo"
+                        icon={<ArchiveIcon />}
+                    />
+                    <BottomNavigationAction
+                        sx={{ p: "0" }}
+                        label="Safe"
+                        icon={<ArchiveIcon />}
+                    /> */}
                 </BottomNavigation>
             </Paper>
         </>

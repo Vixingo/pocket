@@ -418,7 +418,6 @@ function Navbar() {
 
                             <Menu
                                 sx={{ mt: "45px", p: "0" }}
-                                id="menu-appbar"
                                 anchorEl={anchorElUser}
                                 anchorOrigin={{
                                     vertical: "top",

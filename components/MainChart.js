@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Stock } from "@ant-design/plots";
 import styles from "../styles/MainChart.module.css";
 import { Box } from "@mui/material";
+import ChartSetting from "./ChartSetting";
 
 function MainChart() {
     const [data, setData] = useState([]);
@@ -92,17 +93,8 @@ function MainChart() {
                     position: "relative",
                 }}
             >
-                <Box
-                    sx={{
-                        position: "absolute",
-                        left: "0",
-                        top: "0",
-                        zIndex: "111",
-                        background: "red",
-                    }}
-                >
-                    {/* <h1>Hello world</h1> */}
-                </Box>
+                <ChartSetting />
+
                 <Stock {...config} />
             </Box>
         </>
