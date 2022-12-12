@@ -11,7 +11,6 @@ function ChartSetting() {
                     left: "0",
                     top: "0",
                     zIndex: "111",
-                    background: "red",
                 }}
             >
                 Hello
