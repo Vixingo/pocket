@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import React from "react";
 import SettingsIcon from "@mui/icons-material/Settings";
+import ChartOptions from "./ChartOptions";
 const style = {
     position: "absolute",
     top: "50%",
@@ -63,7 +64,7 @@ function ChartSetting() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>hello</Box>
+                <Box sx={style}>coming from server</Box>
             </Modal>
             <Modal
                 open={open2}
@@ -71,7 +72,9 @@ function ChartSetting() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>Hllooo</Box>
+                <Box sx={style}>
+                    <ChartOptions />
+                </Box>
             </Modal>
         </>
     );
