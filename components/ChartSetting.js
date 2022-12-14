@@ -14,6 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 import { FaEthereum } from "react-icons/fa";
+
 const style = {
     position: "absolute",
     top: "50%",
@@ -34,6 +35,7 @@ function ChartSetting() {
     const handleOpen2 = () => setOpen2(true);
     const handleClose = () => setOpen(false);
     const handleClose2 = () => setOpen2(false);
+
     return (
         <>
             <Box
