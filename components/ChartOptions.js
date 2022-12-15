@@ -74,7 +74,7 @@ function ChartOptions() {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    Chart Types{" "}
+                    <Typography>Coming soon</Typography>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <ToggleButtonGroup
