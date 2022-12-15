@@ -134,7 +134,7 @@ function ChartSetting() {
                     <List>
                         {currencies.map((data) => {
                             return (
-                                <ListItem disablePadding>
+                                <ListItem disablePadding key={data.name}>
                                     <ListItemButton
                                         onClick={() => {
                                             setCharttop(data.name);

@@ -81,16 +81,19 @@ function NavFooter({ position }) {
                             <Image
                                 width={40}
                                 height={40}
+                                alt="visa"
                                 src="/img/visa-footer.svg"
                             />{" "}
                             <Image
                                 width={40}
                                 height={40}
+                                alt="master"
                                 src="/img/maestro-footer.svg"
                             />{" "}
                             <Image
                                 width={40}
                                 height={40}
+                                alt="master"
                                 src="/img/mast-footer.svg"
                             />{" "}
                         </Box>
