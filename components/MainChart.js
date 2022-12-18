@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Stock } from "@ant-design/plots";
+import { Plot, Stock } from "@ant-design/plots";
 import styles from "../styles/MainChart.module.css";
 import { Box } from "@mui/material";
 import ChartSetting from "./ChartSetting";
@@ -43,7 +43,42 @@ function MainChart() {
                 alias: "最低价",
             },
         },
+        xAxis: {
+            grid: {
+                line: {
+                    style: {
+                        stroke: "#ededed",
+                        lineWidth: 1,
+                        lineDash: [0, 0],
+                        strokeOpacity: 0.1,
+                        shadowColor: "black",
+                        shadowBlur: 10,
+                        shadowOffsetX: 5,
+                        shadowOffsetY: 5,
+                        cursor: "pointer",
+                    },
+                },
+            },
+        },
+        yAxis: {
+            grid: {
+                line: {
+                    style: {
+                        stroke: "#ededed",
+                        lineWidth: 1,
+                        lineDash: [0, 0],
+                        strokeOpacity: 0.1,
+                        shadowColor: "black",
+                        shadowBlur: 10,
+                        shadowOffsetX: 5,
+                        shadowOffsetY: 5,
+                        cursor: "pointer",
+                    },
+                },
+            },
+        },
         tooltip: {
+            showContent: false,
             crosshairs: {
                 // 自定义 crosshairs line 样式
                 line: {
