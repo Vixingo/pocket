@@ -131,7 +131,8 @@ function Control(props) {
                             style={{
                                 color: "#fff",
                                 background: "unset",
-                                border: "none   ",
+                                border: "none",
+                                outline: "none",
                                 maxWidth: "136px",
                                 fontSize: "19px",
                                 textAlign: "center",
