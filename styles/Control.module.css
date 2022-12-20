@@ -48,7 +48,9 @@
     width: 64px;
     fill: rgba(167, 32, 18, 0.8) !important;
 }
-
+.input:focus-visible {
+    outline: none;
+}
 @media (max-width: 900px) {
     .btn_holder {
         display: flex;

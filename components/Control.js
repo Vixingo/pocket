@@ -124,13 +124,15 @@ function Control(props) {
                             {" "}
                             Amount{" "}
                         </Typography>
-                        <TextField
+                        <input
                             value={amount}
                             defaultValue={amount}
                             onChange={handleChange}
-                            size="small"
-                            sx={{
+                            style={{
                                 color: "#fff",
+                                background: "unset",
+                                border: "none   ",
+                                maxWidth: "136px",
                                 fontSize: "19px",
                                 textAlign: "center",
                                 padding: "8px 8px 4px 8px",
