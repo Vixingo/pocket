@@ -7,7 +7,10 @@ import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 function Control(props) {
-    const [amount, setAmount] = useState(1);
+    const [amount, setAmount] = useState(100);
+    const handleChange = (event) => {
+        setAmount(event.target.value);
+    };
     return (
         <>
             <Box
@@ -121,16 +124,18 @@ function Control(props) {
                             {" "}
                             Amount{" "}
                         </Typography>
-                        <Typography
+                        <TextField
+                            value={amount}
+                            defaultValue={amount}
+                            onChange={handleChange}
+                            size="small"
                             sx={{
                                 color: "#fff",
                                 fontSize: "19px",
                                 textAlign: "center",
                                 padding: "8px 8px 4px 8px",
                             }}
-                        >
-                            ${amount}
-                        </Typography>
+                        />
                         <Box
                             sx={{
                                 display: "flex",
