@@ -8,8 +8,17 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 function Control(props) {
     const [amount, setAmount] = useState(100);
+
     const handleChange = (event) => {
-        setAmount(event.target.value);
+        let in_value = event.target.value;
+        setAmount(in_value);
+    };
+    const decrease = () => {
+        setAmount(amount - 1);
+    };
+    const increase = () => {
+        let t = new Number(amount);
+        setAmount(t + 1);
     };
     return (
         <>
@@ -145,7 +154,6 @@ function Control(props) {
                                 flexDirection: "row",
                             }}
                         >
-                            {" "}
                             <Button
                                 sx={{
                                     borderTop: "1px solid #535562",
@@ -153,9 +161,7 @@ function Control(props) {
                                     borderRadius: "0",
                                     minWidth: "45px",
                                 }}
-                                onClick={() => {
-                                    setAmount(amount - 1);
-                                }}
+                                onClick={decrease}
                             >
                                 <RemoveRoundedIcon sx={{ fontSize: "14px" }} />
                             </Button>
@@ -174,13 +180,10 @@ function Control(props) {
                                 sx={{
                                     borderTop: "1px solid #535562",
                                     padding: "2px",
-
                                     borderRadius: "0",
                                     minWidth: "45px",
                                 }}
-                                onClick={() => {
-                                    setAmount(amount + 1);
-                                }}
+                                onClick={increase}
                             >
                                 <AddIcon sx={{ fontSize: "14px" }} />
                             </Button>
